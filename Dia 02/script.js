@@ -1,0 +1,1 @@
+console.log("Dia 02 do curso de 21 dias")
