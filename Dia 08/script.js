@@ -1,0 +1,1 @@
+window.alert("Atividade feita em outro fork. Assunto foi funções.")
