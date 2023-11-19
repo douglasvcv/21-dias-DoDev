@@ -8,7 +8,7 @@ while(condition == true){
     if(choice == "l"){
         var login = prompt("Digite o nome de usuário.")
         var login2 = Number(prompt("Digite a senha."))
-        if(login = nomes && login2 == senhas){
+        if(login == nomes && login2 == senhas){
             console.log("sucesso!")
         }else{
             console.log("Confira os dados e tente novamente!")

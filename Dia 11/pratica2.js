@@ -3,7 +3,7 @@ let years = []
 let values = []
 let index = 0
 let condition = true
-while(condition == true){
+while(condition){
     let questionModel = prompt("Insira um modelo:")
     let questionYear = Number(prompt("Insira o ano:"))
     let questionValue = Number(prompt("Insira o valor"))
@@ -18,10 +18,14 @@ while(condition == true){
 
 }
 for(i = 0; i < models.length; i++){
-    console.log(`O ${models[i]}, de ${years[i]}, tem o valor de ${values[i]}`)
+    console.log(`O ${models[i]}, de ${years[i]}, tem o valor de R$ ${values[i]}`)
 }
-for(let i =0; i < values.length; i++){
-    for(let j = 0; j < values.length - i - 1; j++){
-        
+for(let i =values.length-1; i > 0; i--){
+    for(let j = i-1; j>-1; j--){
+        if(values[j+1]<values[j]){
+          [values[j+1],values[j]]=[values[j],values[j+1]]
+        }
+      
     }
 }
+console.log(values)
