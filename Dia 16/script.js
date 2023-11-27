@@ -20,3 +20,7 @@ console.log(numeroArray.sort())
 //irá filtrar os elementos do array por uma requisição específica
 numeroArray.filter(x => x > 3)
 console.log(numeroArray.filter(x => x > 2))
+
+let arrayTeste = numeroArray.filter(x => x <= 3)
+
+console.log(arrayTeste)
