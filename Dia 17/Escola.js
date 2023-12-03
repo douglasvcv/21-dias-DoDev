@@ -60,7 +60,7 @@ function cadastrarReserva(){
     } while (existe = false);
 
 
-        let perguntaNome = prompt("Insira o nome do hotel")
+        let perguntaNome = prompt("Insira o nome do responsável")
         
         let perguntaEntrada = prompt("Insira o dia de entrada")
        do {
@@ -70,15 +70,16 @@ function cadastrarReserva(){
                console.log("O dia da entrada não pode ser maior que o dia da saída")
             }
         } while (perguntaEntrada > perguntaSaida);
-        let reserva = new Reserva(perguntaId, perguntaNome, perguntaEntrada, perguntaSaida)
-       reservas.push(reserva)
+        let reserva = new Reserva(idReserva, perguntaNome, perguntaEntrada, perguntaSaida)
+       idReserva++
+        reservas.push(reserva)
        
   
     }
 
 function idHotel(id){
-    if(id == hoteis[0].Id){
-        return reservas
+    if(id == reservas.Id){
+        console.log(`${hoteis.Nome}, ${reservas.NomeResponsavel}, ${reservas.DiaEntrada} a ${reservas.DiaSaida}`)
     }
     
 }
@@ -86,4 +87,19 @@ function idReserva(id){
     if(id == reservas[0].Id){
         return hoteis
     }
+}
+
+function responsavel(responsavel){
+   let existe = false
+    do {
+        let pergunta = prompt("Digite o nome do responsavel")
+        if(pergunta == reservas.NomeResponsavel){
+            console.log("Procurando reserva!")
+            existe = true
+        }else{
+            console.log("Digite um nome de responsável existente!")
+        }
+    } while (existe = false);
+    
+    console.log(reservas)
 }
